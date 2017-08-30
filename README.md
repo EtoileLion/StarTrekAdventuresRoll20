@@ -1,6 +1,7 @@
 # StarTrekAdventuresRoll20
 
 A branch from the original Roll20 Community Sheet of Star Trek Adventures. This is a custom sheet and is not officially supported.
+
 Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramount Pictures Corp. STAR TREK and related marks and logos are trademarks of CBS Studios Inc. All Rights Reserved.
 
 ## Installation Instructions (Roll20 Pro Required)
