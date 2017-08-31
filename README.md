@@ -21,7 +21,7 @@ Start playing!
 
 ## FAQ
 * *The fonts don't look right!*  
-  You're using Chrome or Firefox and have not allowed "Unsafe" Scripts (Mixed HTTPS and HTTP content) on the page. Click the little shield icon at the right end of the address bar.
+  You're using Chrome or Firefox and have not allowed "Unsafe" Scripts (Mixed HTTPS and HTTP content) on the page. Click the little shield icon in the address bar, and either "Disable Protection for now" (Firefox), or "Load unsafe scripts" (Chrome). You will have to do this every time you open roll20. Nothing I can do about it, problem's on Roll20's end.
   
 * *I want to roll something without using the sheet. How do?*  
   The command specifications for Challenge Rolls are:
