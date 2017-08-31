@@ -1,6 +1,6 @@
 # StarTrekAdventuresRoll20
 
-A branch from the original Roll20 Community Sheet of Star Trek Adventures. This is a custom sheet and is not officially supported.
+A branch from the original Roll20 Community Sheet of Star Trek Adventures. This is a custom sheet that requires a Pro level account for script support and is not officially supported.
 
 Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramount Pictures Corp. STAR TREK and related marks and logos are trademarks of CBS Studios Inc. All Rights Reserved.
 
@@ -16,6 +16,8 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 9. Create a character sheet in the game, with the name "GMSheet".
 10. In that sheet, under "Attributes & Abilities", add an Attribute called "Momentum".
 11. Add another Attribute to that sheet called "Threat". These are used for storage by the global token system.
+12. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum).
+13. Generate a Threat rollable table, filled with 21 icons (available under images/threat). **(This may expand, as I dont know the common levels of threat in the game yet)**
 
 Start playing!
 
