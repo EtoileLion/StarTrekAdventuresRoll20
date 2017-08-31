@@ -20,10 +20,10 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 Start playing!
 
 ## FAQ
-* *The fonts don't look right!*
+* *The fonts don't look right!*  
   You're using Chrome or Firefox and have not allowed "Unsafe" Scripts (Mixed HTTPS and HTTP content) on the page. Click the little shield icon at the right end of the address bar.
   
-* *I want to roll something without using the sheet. How do?*
+* *I want to roll something without using the sheet. How do?*  
   The command specifications for Challenge Rolls are:
   ```
   !chaldice {["dice":<dice>]}
