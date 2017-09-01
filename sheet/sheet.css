@@ -1,0 +1,1159 @@
+@font-face {
+  font-family: "startrek";
+  src:  local('Swiss911 UCm BT Regular'),
+        local('Swiss911 UCm BT'),
+        local('Swiss 911 Ultra Compressed BT');
+  src:  url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/font/swiss911.eot");
+  src:  url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/font/swiss911.eot?#iefix") format("embedded-opentype"),
+        url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/font/swiss911.woff2") format("woff2"),
+        url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/font/swiss911.woff") format("woff"),        
+        url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/font/swiss911.ttf") format("truetype");
+        
+}
+
+.sheet-wrapper {
+    padding-left:10px;
+}
+
+.sheet-controls {
+    width: 100%;
+    display: inline-block;
+}
+
+.sheet-character,
+.sheet-starship,
+.sheet-settings
+{
+    display: none;
+}
+
+.sheet-character_type[value="character"] ~ .sheet-character,
+.sheet-character_type[value="starship"] ~ .sheet-starship,
+{
+    display: block;
+}
+
+.sheet-settings_toggle[value="on"] ~ .sheet-character,
+.sheet-settings_toggle[value="on"] ~ .sheet-starship
+{
+    display: None;
+}
+
+.sheet-settings_toggle[value="on"] ~ .sheet-settings {
+    display: block;
+}
+
+.sheet-character_type[value="starship"] ~ .sheet-settings_toggle[value="0"] ~ .sheet-sidedeco1,
+.sheet-character_type[value="starship"] ~ .sheet-settings_toggle[value="0"] ~ .sheet-sidedeco2 {
+    width: 124px;
+}
+
+.sheet-settings_toggle[value="on"] ~ .sheet-sidedeco1,
+.sheet-settings_toggle[value="on"] ~ .sheet-sidedeco1,
+.sheet-settings_toggle[value="on"] ~ .sheet-sidedeco2
+{
+    display: none;
+}
+
+.sheet-character_type[value="starship"] ~ .sheet-settings_toggle[value="on"] ~ .sheet-topback .sheet-stress_settings,
+.sheet-character_type[value="character"] ~ .sheet-settings_toggle[value="on"] ~ .sheet-topback .sheet-shields_settings,
+.sheet-character_type[value="character"] ~ .sheet-settings_toggle[value="on"] ~ .sheet-topback .sheet-power_settings {
+    display: none;
+}
+
+
+.sheet-topback.sheet-character,
+.sheet-topback.sheet-settings
+{
+    width: 875px;
+}
+
+.sheet-topback.sheet-starship{
+    width: 1070px;
+}
+
+.sheet-bottomback.sheet-character,
+.sheet-bottomback.sheet-settings
+{
+    width: 925px;
+}
+
+.sheet-bottomback.sheet-starship {
+    width: 1120px;
+}
+
+.sheet-bottomback.sheet-starship .sheet-bottomsection > .sheet-row {
+    min-height: 1000px;
+}
+
+.sheet-rolltemplates {
+    display: none;
+}
+
+button[type="roll"] {
+  display: inline-block;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+  border: 2px solid;
+  color: white;
+  font-family: "startrek", Impact;
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 14px;
+  width: 87px;
+  text-align: right;
+  padding: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 3px;
+}
+
+button[type="roll"] * {
+    pointer-events: none;
+}
+
+button[type="roll"] span {
+    display: block;
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.sheet-attributecontainer button[type="roll"] {
+    border-color: darkviolet;
+    background-color: darkviolet;
+    letter-spacing: 0.5px;
+}
+
+.sheet-attributecontainer button[type="roll"]:hover {
+    background-color: white;
+    color: darkviolet;
+}
+
+
+button[type="roll"]:before {
+    content: "" !important;
+}
+
+::-webkit-scrollbar {
+	border: 1px solid #9999cc;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff9900;
+}
+
+::-webkit-scrollbar-button:decrement {
+    border-top-right-radius: 15px;
+    border: 1px solid #9999cc;
+    background: #9999cc;
+}
+
+::-webkit-scrollbar-button:increment {
+    border-bottom-right-radius: 15px;
+    border: 1px solid #9999cc;
+    background: #9999cc;
+}
+
+.sheet-vertdeco {
+    position: relative;
+    left: 550px;
+    top: -30px;
+    height: 40px;
+    margin-bottom: -40px;
+    width: 10px;
+    background: white;
+}
+
+.repcontrol {
+    border-radius: 25px;
+    background: #cc6699;
+}
+
+.repcontrol .repcontrol_add {
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    border-right: 6px solid white;
+    background: #cc6699;
+    font-size: 10px;
+    color: white;
+    
+}
+
+.repcontrol .repcontrol_add:hover{
+    background: #cc99cc;
+}
+
+.repcontrol .repcontrol_edit {
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    border-left: 6px solid white;
+    background: #cc6699;
+    font-size: 10px;
+    color: white;
+    
+}
+
+.repcontrol .repcontrol_edit:hover{
+    background: #cc99cc;
+}
+
+.sheet-sidedeco1 {
+    position: relative;
+    height: 80px;
+    margin-bottom: -155px;
+    width: 108px;
+    top: 200px;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    background: darkviolet;
+}
+
+.sheet-sidedeco2 {
+    position: relative;
+    height: 500px;
+    margin-bottom: -475px;
+    width: 108px;
+    top: 490px;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    background: #cc6699;
+}
+
+.sheet-topback {
+    background: #ff9900 url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Star%20Trek%20Adventures%202d20/toplogo.png") no-repeat 24px 30px;
+    border-bottom-left-radius: 130px;
+    margin-bottom: 10px;
+    padding-left: 100px;
+}
+
+.sheet-character.sheet-topback,
+.sheet-settings.sheet-topback
+{
+    height: 250px;
+}
+
+.sheet-starship.sheet-topback {
+    height: 220px;
+}
+
+.sheet-bottomback {
+    background: #9999cc;
+    border-top-left-radius: 130px;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.sheet-topsection {
+    background: white;
+    border-bottom-left-radius: 70px;
+    height: 93%;
+    float: right;
+}
+
+.sheet-character .sheet-topsection,
+.sheet-settings .sheet-topsection
+{
+    width: 90%;
+    padding-left: 50px;
+}
+
+.sheet-starship .sheet-topsection {
+    width: 93%;
+    padding-left: 30px;
+}
+
+.sheet-attributecontainer select {
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid darkviolet;
+    background-color: darkviolet;
+    color: white;
+    font-family: "startrek", Impact;
+    font-size:17px;
+    letter-spacing:0.2px;
+    text-transform:uppercase;
+}
+
+.sheet-topsection h1 {
+    display: inline-block;
+    text-align: right;
+    color: #ff9900;
+    font-size: 45px;
+    line-height: 35px;
+    font-family: "startrek", Impact;
+    margin-left: 10px;
+    float:right;
+    margin-top: 5px;
+    font-weight:normal;
+}
+
+.sheet-bottomsection {
+    background: white;
+    width: 92%;
+    border-top-left-radius: 70px;
+    float: right;
+    padding-top: 30px;
+    padding-left: 16px;
+}
+
+.sheet-sectionheader {
+  background-color: #ff9900;
+  width: 100%;
+  border-radius: 20px;
+  height: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px
+}
+
+.sheet-sectionheader .sheet-label {
+  background-color: white;
+  color: DarkMagenta;
+  font-family: "startrek", Impact;
+  font-weight: 100;
+  font-size: 25.5px;
+  line-height: 15px;
+  margin: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.sheet-charinfocontainer {
+    display: inline-block;
+    width: 100%;
+}
+
+.sheet-settings .sheet-sectionheader {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sheet-charinfocontainer .sheet-label {
+    font-family: "startrek", Impact;
+    color: darkviolet;
+    width: 130px;
+    line-height: 35px;
+    margin-right: 5px;
+    float: left;
+}
+
+.sheet-starship .sheet-charinfocontainer .sheet-label,
+.sheet-character .sheet-charinfocontainer .sheet-label {
+    font-size: 25px;
+}
+
+.sheet-settings .sheet-label
+{
+    font-size: 18px;
+}
+
+.sheet-charinfocontainer input[type="text"] {
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px;
+    border-color: darkviolet;
+    width: calc(100% - 135px);
+    font-family: "startrek", Impact;
+    font-size:150%;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
+.sheet-spacer {
+    clear: both;
+}
+
+.sheet-attributes,
+.sheet-disciplines,
+.sheet-values,
+.sheet-talents,
+.sheet-focuses,
+.sheet-stress,
+.sheet-injuries,
+.sheet-other_equipment,
+.sheet-weapons,
+.sheet-departments,
+.sheet-shields,
+.sheet-launch-bay,
+.sheet-power
+{
+    margin-top: 27px;
+}
+
+.sheet-attributecontainer .sheet-label,
+.sheet-weaponscontainer .sheet-label,
+.sheet-weaponscontainer .sheet-iconlabel,
+.sheet-weaponscontainer button[type="roll"]
+{
+  display: inline-block;
+  float: left;
+  border: 2px solid;
+  color: white;
+  font-family: "startrek", Impact;
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 18px;
+  width: 87px;
+  text-align: right;
+  padding-right: 1px;
+  margin-right: 4px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.sheet-settings .sheet-label {
+    width: 60px;
+}
+
+.sheet-attributecontainer .sheet-label {
+  border-color: darkviolet;
+  background-color: darkviolet;
+}
+
+.sheet-attributecontainer .sheet-breaches .sheet-label {
+    border: none;
+    background: none;
+    float: left;
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 15px;
+    margin-left: 2px;
+    font-style: lighter;
+    color: #9370DB;
+    width: 40px;
+}
+
+.sheet-scale {
+    height: 150px;
+    padding: 0px;
+    position: relative;
+    background: url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/images/shipdiag.png") center center no-repeat;
+    background-size: contain;
+}
+
+.sheet-scale .sheet-attributecontainer {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+}
+
+.sheet-scale .sheet-attributecontainer .sheet-label {
+    width: 50px;
+    background: #ff9900;
+    border-color: #ff9900;
+}
+
+.sheet-scale .sheet-attributecontainer input[type="number"] {
+    border-color: #ff9900;
+    color: #ff9900;
+}
+
+
+.sheet-power .sheet-attributecontainer .sheet-label,
+.sheet-crew .sheet-attributecontainer .sheet-label
+{
+    width: 75px;
+}
+
+.sheet-weaponscontainer .sheet-label,
+.sheet-weaponscontainer .sheet-iconlabel,
+.sheet-weaponscontainer button[type="roll"]
+{
+  border-color: #cc6699;
+  background-color: #cc6699;
+}
+
+.sheet-weaponscontainer .sheet-iconlabel,
+.sheet-weaponscontainer button[type="roll"]
+{
+    width: 25px;
+    height: 22px;
+    background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Star%20Trek%20Adventures%202d20/logosmall.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.sheet-attributecontainer input[type="text"],
+.sheet-weaponscontainer input[type="text"]
+{
+    border: 2px solid;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 9px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 15px;
+    padding-left: 3px;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    top: -5px;
+    margin-right: -42px;
+    width: 40px;
+    height: 20px;
+    border: 1px dotted red;
+    border-radius: 20px;
+    background-color: transparent;
+    margin-left: 15px;
+}
+
+input[type="checkbox"] + span {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid #cc99cc;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+input[type="checkbox"]:checked + span {
+  background-color: #cc99cc;
+}
+
+.sheet-determination-values,
+.sheet-momentum-values
+{
+    display: inline-block;
+    padding: 0px;
+    height: 25.5px;
+    letter-spacing: 1px;
+    float: right;
+    line-height: 20px;
+    margin-right: 3px;
+    position: relative;
+    top: -2px;
+}
+
+.sheet-controls {
+    display: inline-block;
+    text-align: right;
+    width: 99%;
+    padding: 0px 5px 0px 0px;
+}
+
+.sheet-controls input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    top: 10px;
+    margin-right: -36px;
+    height: 20px;
+    width: 30px;
+}
+
+.sheet-controls input[type="checkbox"] + span {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-family: pictos;
+    text-align: center;
+    font-size: 18px;
+    color: #ff9900;
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    border: 1px solid #cc99cc;
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: #ff9900;
+}
+
+.sheet-controls input[type="checkbox"]:checked + span {
+    background-color: #ff9900;
+    color: white;
+}
+
+div.sheet-breaches {
+    width: 138px;
+}
+
+.sheet-attributecontainer .sheet-breaches input[type="checkbox"] {
+    position: relative;
+    top: 0px;
+    left: -16.25px;
+    width: 12px;
+    height: 10px;
+}
+
+.sheet-attributecontainer .sheet-breaches input[type="checkbox"] + span
+{
+    margin-left: 12px;
+    margin-top 25px;
+    width: 12px;
+    height: 10px;
+}
+
+input[type="number"] {
+  border: 2px solid;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 0 0 0 3px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin-right: 7px;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus
+{
+  -moz-appearance: number-input;
+}
+
+.sheet-attributecontainer input[type="number"] {
+  border-color: darkviolet;
+  color: darkviolet;
+}
+
+.sheet-weaponscontainer {
+    display: inline-block;
+}
+
+.sheet-weaponscontainer input[type="number"] {
+  border-color: #cc6699;
+  color: #cc6699;
+}
+
+.sheet-weaponscontainer input[type="text"] {
+  border-color: #cc6699;
+}
+
+.sheet-weaponscontainer input[type="text"][name="attr_weaponqualities"] {
+    width: calc(100% - 101px);
+}
+
+hr {
+    color: #cc6699;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cc6699;
+    margin: 1em 0;
+    padding: 0;
+}
+
+textarea {
+  border: 0px;
+  background-color: transparent;
+  width: 100%;
+  color: #9370DB;
+  resize: vertical;
+  background-image:
+    linear-gradient(to right, transparent 15px, transparent 15px),
+    linear-gradient(to left, transparent 15px, transparent 15px),
+    repeating-linear-gradient(transparent, transparent 30px, #9370DB 30px, #9370DB 31px, white 31px);
+  background-attachment: local;
+  line-height: 31px;
+  font-size: 15px;
+  padding: 8px 5px;
+}
+
+.sheet-col input[type="checkbox"] {
+    margin-bottom: 5px;
+}
+
+.sheet-momentum .sheet-label,
+.sheet-determination .sheet-label
+{
+    font-family: "startrek";
+    font-size: 25.5px;
+    font-style: lighter;
+    color: #9370DB;
+}
+
+
+.sheet-values textarea,
+.sheet-injuries textarea {
+    height: 125px;
+}
+
+.sheet-talents textarea {
+    height: 175px;
+}
+
+.sheet-focuses textarea {
+    height: 300px;
+}
+
+.sheet-other_equipment textarea {
+    height: 250px;
+}
+
+.sheet-additional-notes textarea {
+    height: 650px;
+}
+
+/* Rolltemplate */
+.sheet-rolltemplate-lcars table {
+    width: 230px;
+    padding: 2px;
+    font-weight: normal;
+    font-family: "startrek","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Star%20Trek%20Adventures%202d20/sheet_roll_temp_lcars_full.png") top left;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #000000;
+    border-spacing: 0;
+    border:1px solid #9999cc;
+}
+ 
+.sheet-rolltemplate-lcars th {
+    font-weight: normal;    
+	padding-left: 50px;
+	padding-Top: 18px;
+	font-size: 1.5em;
+    text-align: center;
+    border:none;
+}
+ 
+ 
+.sheet-rolltemplate-lcars td {
+    padding-left: 50px;
+    font-size: 15px;
+    vertical-align: top;
+    border:none;
+    line-height:12px;
+}
+ 
+.sheet-rolltemplate-lcars .sheet-result {
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(112, 0, 0);
+    padding-bottom: 20px;
+}
+ 
+.sheet-rolltemplate-lcars .inlinerollresult  {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-lcars .inlinerollresult.fullcrit {
+	color: #3FB315;
+    border: none;
+}
+ 
+.sheet-rolltemplate-lcars .inlinerollresult.fullfail {
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-lcars .inlinerollresult.importantroll {
+	color: #3FB315;
+    border: none;
+}
+
+.sheet-rolltemplate-challengeroll table {
+    width: 230px;
+    padding: 2px;
+    font-weight: bold;
+    background: url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/images/challenge.png") top left;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    color: #000000;
+    border-spacing: 0;
+    border:1px solid #9999cc;
+}
+ 
+.sheet-rolltemplate-challengeroll-dice {
+	padding-left: 50px;
+	padding-Top: 0px;
+	font-size: 1.5em;
+    text-align: center;
+    border:none;
+    color:white;
+    font-weight:normal;
+    font-family: "startrek","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+ 
+ 
+.sheet-rolltemplate-challengeroll td {
+    padding-left: 50px;
+    font-size: 1.0em;
+    vertical-align: top;
+    border:none;
+}
+
+.sheet-rolltemplate-headbar {
+    width: 99%;
+    border-radius: 20px;
+    height: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sheet-rolltemplate-taskbar {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.sheet-rolltemplate-headbar span {
+    padding-left:3px;
+    padding-right:5px;
+    font-family: "startrek","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-left: 15px;
+    font-weight:normal;
+    font-size:20px;
+    line-height:16px;
+}
+
+.sheet-rolltemplate-challengeroll-result {
+	padding-left: 50px;
+	padding-Top: 10px;
+	font-size: 1.5em;
+    text-align: center;
+    border:none;
+    color:white;
+    font-weight:normal;
+    font-family: "startrek","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+
+.sheet-rolltemplate-challengeroll .sheet-result {
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(112, 0, 0);
+    padding-bottom: 20px;
+}
+ 
+.sheet-rolltemplate-challengeroll .inlinerollresult  {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-challengeroll .inlinerollresult.fullcrit {
+	color: #3FB315;
+    border: none;
+}
+ 
+.sheet-rolltemplate-challengeroll .inlinerollresult.fullfail {
+    color: #000000;
+    border: none;
+}
+ 
+.sheet-rolltemplate-challengeroll .inlinerollresult.importantroll {
+	color: #3FB315;
+    border: none;
+}
+
+
+.sheet-noshow{
+    display: none !important;
+}
+
+input[type="hidden"][value="false"] + input[type="checkbox"],
+input[type="hidden"][value="false"] + input[type="checkbox"] + span,
+{
+    display: none;
+} 
+
+.sheet-black:checked ~ .sheet-wrapper,
+.sheet-black:checked ~ .sheet-wrapper .sheet-topsection,
+.sheet-black:checked ~ .sheet-wrapper input,
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomsection,
+.sheet-black:checked ~ .sheet-wrapper .sheet-label,
+.sheet-black:checked ~ .sheet-wrapper .sheet-vertdeco{
+    background-color:black;
+    color:white;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-charinfo input {
+    border-color: #664466;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback {
+    background-color:#CC6666;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-sidedeco1{
+    border-top: 15px solid black;
+    border-bottom: 15px solid black;
+    background-color:#FF9933;
+}
+.sheet-black:checked ~ .sheet-wrapper .sheet-sidedeco2{
+    border-top: 15px solid black;
+    border-bottom: 15px solid black;
+    background-color:#9988AA;    
+}
+
+.sheet-black:checked ~ .sheet-wrapper .repcontrol_add {
+    border-right: 6px solid black;
+    background-color:#6688CC;
+    font-family:"startrek";
+    font-size:20px;
+    text-transform:uppercase;
+    color:black;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-topback {
+    background-image:url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/images/logoblack.png");
+}
+
+.sheet-black:checked ~ .sheet-wrapper .repcontrol {
+    background-color:#6688CC;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer input[type="text"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer .sheet-label{
+    border-color:#6688cc;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer select {
+    background-color:#6688cc;
+    border-color:#6688CC;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .repitem hr {
+    border-color:#6688CC;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-weaponscontainer button[type="roll"] {
+    border-color:#882211;
+    background-color:#882211;    
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-weaponscontainer button[type="roll"]:hover {
+    background-color:black;    
+}
+
+.sheet-black:checked ~ .sheet-wrapper .repcontrol_edit {
+    border-left: 6px solid black;
+    color:black;
+    background-color:#6688CC;
+    font-family:"startrek";
+    font-size:20px;
+    text-transform:uppercase;    
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback input[type="text"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback input[type="number"]{
+    background-color:black;
+    color: white;
+    font-family: Arial;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer .sheet-label {
+    background-color: #6688CC;
+    color:black;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer .sheet-label,
+.sheet-black:checked ~ .sheet-wrapper .sheet-settings input[type="number"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer input[type="text"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer input[type="number"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer .sheet-label{
+    color:black;
+    background-color: #6688CC;
+    border-color:#6688CC;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplines input[type="number"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-departments input[type="number"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributes input[type="number"] {
+    color:black;
+    background-color: #CC99CC;
+    border-color: #CC99CC;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributecontainer button[type="roll"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplinecontainer button[type="roll"]{
+    color:black;
+    font-size:15px;
+    background-color: #CC99CC;
+    border-color: #CC99CC;
+}
+
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributecontainer button[type="roll"]:hover,
+.sheet-black:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplinecontainer button[type="roll"]:hover{
+    background-color: black;
+    color: #CC99CC;
+    border-color: #CC99CC;    
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-power .sheet-attributecontainer .sheet-label,
+.sheet-black:checked ~ .sheet-wrapper .sheet-crew .sheet-attributecontainer .sheet-label,
+.sheet-black:checked ~ .sheet-wrapper .sheet-power input[type="number"],
+.sheet-black:checked ~ .sheet-wrapper .sheet-crew input[type="number"] {
+    background-color: #FFFF99;
+    color:black;
+    border-color: #FFFF99;
+}
+
+.sheet-black:checked ~ .sheet-wrapper .sheet-scale .sheet-attributecontainer .sheet-label,
+.sheet-black:checked ~ .sheet-wrapper .sheet-scale .sheet-attributecontainer input[type="number"] {
+    border-color: #ff9900;
+    background-color: #FF9900;
+    color: black;
+}
+
+
+.sheet-blue:checked ~ .sheet-wrapper,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-topsection,
+.sheet-blue:checked ~ .sheet-wrapper input,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomsection,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-label,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-vertdeco{
+    background-color:#001323;
+    color:white;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-topback,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-sectionheader {
+	background-color: #0011EE;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-charinfo input {
+    border-color: #5599FF;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback {
+    background-color:#5599FF;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-sidedeco1{
+    border-top: 15px solid #001323;
+    border-bottom: 15px solid #001323;
+    background-color:#9999FF;
+}
+.sheet-blue:checked ~ .sheet-wrapper .sheet-sidedeco2{
+    border-top: 15px solid #001323;
+    border-bottom: 15px solid #001323;
+    background-color:#006699;    
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .repcontrol_add {
+    border-right: 6px solid #001323;
+    background-color:#6688CC;
+    font-family:"startrek";
+    font-size:20px;
+    text-transform:uppercase;
+    color:black;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-topback {
+    background-image:url("https://raw.githubusercontent.com/EtoileLion/StarTrekAdventuresRoll20/master/images/logoblack.png");
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .repcontrol {
+    background-color:#6688CC;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-topback  h1 {
+	color: #CCDDFF;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer input[type="text"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer .sheet-label{
+    border-color:#6688cc;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer select {
+    background-color:#6688cc;
+    border-color:#6688CC;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .repitem hr {
+    border-color:#6688CC;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-weaponscontainer button[type="roll"] {
+    border-color:#882211;
+    background-color:#882211;    
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-weaponscontainer button[type="roll"]:hover {
+    background-color:black;    
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .repcontrol_edit {
+    border-left: 6px solid #001323;
+    color:black;
+    background-color:#6688CC;
+    font-family:"startrek";
+    font-size:20px;
+    text-transform:uppercase;    
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback input[type="text"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback input[type="number"]{
+    background-color:#001323;
+    color: white;
+    font-family: Arial;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer .sheet-label {
+    background-color: #6688CC;
+    color:black;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-settings .sheet-attributecontainer .sheet-label,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-settings input[type="number"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer input[type="text"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer input[type="number"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-weaponscontainer .sheet-label{
+    color:black;
+    background-color: #6688CC;
+    border-color:#6688CC;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplines input[type="number"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-departments input[type="number"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributes input[type="number"] {
+    color:black;
+    background-color: #99CCFF;
+    border-color: #99CCFF;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributecontainer button[type="roll"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplinecontainer button[type="roll"]{
+    color:black;
+    font-size:15px;
+    background-color: #99CCFF;
+    border-color: #99CCFF;
+}
+
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-attributecontainer button[type="roll"]:hover,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-bottomback .sheet-disciplinecontainer button[type="roll"]:hover{
+    background-color: #001323;
+    color: #99CCFF;
+    border-color: #99CCFF;    
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-power .sheet-attributecontainer .sheet-label,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-crew .sheet-attributecontainer .sheet-label,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-power input[type="number"],
+.sheet-blue:checked ~ .sheet-wrapper .sheet-crew input[type="number"] {
+    background-color: #4455BB;
+    color:black;
+    border-color: #4455BB;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper .sheet-scale .sheet-attributecontainer .sheet-label,
+.sheet-blue:checked ~ .sheet-wrapper .sheet-scale .sheet-attributecontainer input[type="number"] {
+    border-color: #0011EE;
+    background-color: #0011EE;
+    color: black;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper input[type="checkbox"] + span {
+	border-color: #99CCFF;
+	color: #99CCFF;
+}
+
+.sheet-blue:checked ~ .sheet-wrapper input[type="checkbox"]:checked + span {
+	background-color: #99CCFF;
+	color: white;
+}
