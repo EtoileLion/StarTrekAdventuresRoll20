@@ -10,14 +10,14 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 3. Copy the contents of sheet/sheet.html into the HTML Layout.
 4. Copy the contents of sheet/sheet.css into the CSS Styling.
 5. Go to the API Scripts screen for your game.
-6. Copy the contents of momthreat.js into the New Script. Name it momthreat.js.
-7. Copy the contents of taskdice.js into the New Script. Name it taskdice.js.
-8. Copy the contents of chaldice.js into the New Script. Name it chaldice.js.
+6. Copy the contents of scripts/momthreat.js into the New Script. Name it momthreat.js.
+7. Copy the contents of scripts/taskdice.js into the New Script. Name it taskdice.js.
+8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js.
 9. Create a character sheet in the game, with the name "GMSheet".
 10. In that sheet, under "Attributes & Abilities", add an Attribute called "Momentum".
 11. Add another Attribute to that sheet called "Threat". These are used for storage by the global token system.
-12. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum).
-13. Generate a Threat rollable table, filled with 21 icons (available under images/threat). **(This may expand, as I dont know the common levels of threat in the game yet)**
+12. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum). Order somewhat matters.
+13. Generate a Threat rollable table, filled with 21 icons (available under images/threat). Again, order somewhat matters. **(This may expand, as I dont know the common levels of threat in the game yet)**
 
 Start playing!
 
