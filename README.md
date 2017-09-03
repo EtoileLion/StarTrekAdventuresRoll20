@@ -12,7 +12,7 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 5. Go to the API Scripts screen for your game.
 6. Copy the contents of scripts/momthreat.js into the New Script. Name it momthreat.js. Save the script.
 7. Copy the contents of scripts/taskdice.js into the New Script. Name it taskdice.js. Save the script.
-8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js. Save the script.
+8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js. Save the script.  
 ***The remainder of the instructions may be completed by any GM in the game.***
 9. Create a character sheet in the game, with the name "GMSheet".
 10. In that sheet, under "Attributes & Abilities", add an Attribute called "Momentum".
