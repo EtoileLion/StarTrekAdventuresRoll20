@@ -66,6 +66,7 @@ on("chat:message", function(msg) {
         }
         textout += '</tbody></table></div>';        
         sendChat(msg.who,textout);
+        log(succ+"-"+diff+"="+(succ-diff))
         } else {
             var whoOut = msg.who;
             if(whoOut.indexOf(" (GM)") !== -1) { whoOut = whoOut.substring(0,whoOut.length-5); }
