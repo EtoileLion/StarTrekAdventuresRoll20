@@ -231,13 +231,13 @@ button[type="roll"]:before {
 }
 
 .sheet-character.sheet-topback,
-.sheet-settings.sheet-topback
 {
-    height: 250px;
+    height: 270px;
 }
 
+.sheet-settings.sheet-topback,
 .sheet-starship.sheet-topback {
-    height: 220px;
+    height: 240px;
 }
 
 .sheet-bottomback {
