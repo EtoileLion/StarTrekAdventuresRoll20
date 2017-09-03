@@ -10,9 +10,10 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 3. Copy the contents of sheet/sheet.html into the HTML Layout.
 4. Copy the contents of sheet/sheet.css into the CSS Styling.
 5. Go to the API Scripts screen for your game.
-6. Copy the contents of scripts/momthreat.js into the New Script. Name it momthreat.js.
-7. Copy the contents of scripts/taskdice.js into the New Script. Name it taskdice.js.
-8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js.
+6. Copy the contents of scripts/momthreat.js into the New Script. Name it momthreat.js. Save the script.
+7. Copy the contents of scripts/taskdice.js into the New Script. Name it taskdice.js. Save the script.
+8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js. Save the script.
+***The remainder of the instructions may be completed by any GM in the game.***
 9. Create a character sheet in the game, with the name "GMSheet".
 10. In that sheet, under "Attributes & Abilities", add an Attribute called "Momentum".
 11. Add another Attribute to that sheet called "Threat". These are used for storage by the global token system.
