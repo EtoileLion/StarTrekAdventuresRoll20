@@ -36,7 +36,7 @@
                 <span class="label">ASSIGNMENT:</span><input type="text" name="attr_assignment"/>
             </div>
             <div class="charinfocontainer">
-                <span class="label">TRAITS:</span><input type="text" name="attr_traits"/>
+                <span class="label">TRAITS:</span><input type="text" name="attr_traits" /><br /><input type='text' name='attr_extra_traits' />
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
 			<div class="charinfocontainer">
-                <span class="label">TRAITS:</span><input type="text" name="attr_starship_traits"/>
+                <span class="label">TRAITS:</span><input type="text" name="attr_starship_traits"/><br /><input type='text' name='attr_extra_starship_traits' />
             </div>
         </div>
     </div>
@@ -107,53 +107,59 @@
                 </div>
             </div>
             <div class="sheet-col">
-                <div class="sectionheader">
-                    <span class="label">STRESS</span>
-                </div>
-                <div class="sheet-row">
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">CURRENT</span><input type="number" min=0 name="attr_stress" value="0">
-                        </div>
+                <div class="sheet-stress_settings">
+                    <div class="sectionheader">
+                        <span class="label">STRESS</span>
                     </div>
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">BONUS</span><input type="number" min=0 name="attr_stress_bonus" value="0">
+                    <div class="sheet-row">
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">CURRENT</span><input type="number" min=0 name="attr_stress" value="0">
+                            </div>
                         </div>
-                    </div>
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">MAX</span><input type="number" min=0 name="attr_stress_max" disabled="true" value="(@{fitness} + @{security} + @{stress_bonus})"/>
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">BONUS</span><input type="number" min=0 name="attr_stress_bonus" value="0">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="sectionheader">
-                    <span class="label">SHIELDS</span>
-                </div>
-                <div class="sheet-row">
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">CURRENT</span><input type="number" min=0 name="attr_shields" value="0">
-                        </div>
-                    </div>
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">BONUS</span><input type="number" name="attr_shields_bonus" value="0">
-                        </div>
-                    </div>
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">MAX</span><input type="number" min=0 name="attr_shields_max" disabled="true" value="(@{ship_structure} + @{ship_security} + @{shields_bonus})"/>
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">MAX</span><input type="number" min=0 name="attr_stress_max" disabled="true" value="(@{fitness} + @{security} + @{stress_bonus})"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="sectionheader">
-                    <span class="label">POWER</span>
+                <div class="sheet-shields_settings">
+                    <div class="sectionheader">
+                        <span class="label">SHIELDS</span>
+                    </div>
+                    <div class="sheet-row">
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">CURRENT</span><input type="number" min=0 name="attr_shields" value="0">
+                            </div>
+                        </div>
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">BONUS</span><input type="number" name="attr_shields_bonus" value="0">
+                            </div>
+                        </div>
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">MAX</span><input type="number" min=0 name="attr_shields_max" disabled="true" value="(@{ship_structure} + @{ship_security} + @{shields_bonus})"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="sheet-row">
-                    <div class="sheet-col">
-                        <div class="attributecontainer">
-                            <span class="label">BONUS</span><input type="number" name="attr_power_bonus" value="0">
+                <div class="sheet-power_settings">
+                    <div class="sectionheader">
+                        <span class="label">POWER</span>
+                    </div>
+                    <div class="sheet-row">
+                        <div class="sheet-col">
+                            <div class="attributecontainer">
+                                <span class="label">BONUS</span><input type="number" name="attr_power_bonus" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
