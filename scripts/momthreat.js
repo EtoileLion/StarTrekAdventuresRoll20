@@ -33,9 +33,7 @@ on("destroy:token", function(obj) {
       var sides = oSides.split("|").length;
       if (sides == 7) {
           //I assume this was a momentum.
-          log(momtokens);
           momtokens = _.reject(momtokens, function(el) { return el.id == obj.id});
-          log(momtokens);
       } else { //Otherwise, it was Threat.
           thrtokens = _.reject(thrtokens, function(el) { return el.id == obj.id});
       }
