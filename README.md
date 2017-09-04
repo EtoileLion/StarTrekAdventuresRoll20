@@ -14,11 +14,8 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 7. Copy the contents of scripts/taskdice.js into the New Script. Name it taskdice.js. Save the script.
 8. Copy the contents of scripts/chaldice.js into the New Script. Name it chaldice.js. Save the script.  
 ***The remainder of the instructions may be completed by any GM in the game.***
-9. Create a character sheet in the game, with the name "GMSheet".
-10. In that sheet, under "Attributes & Abilities", add an Attribute called "Momentum".
-11. Add another Attribute to that sheet called "Threat". These are used for storage by the global token system.
-12. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum). Order somewhat matters.
-13. Generate a Threat rollable table, filled with 21 icons (available under images/threat). Again, order somewhat matters. **(This may expand, as I dont know the common levels of threat in the game yet)**
+10. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum). Order somewhat matters.
+11. Generate a Threat rollable table, filled with 21 icons (available under images/threat). Again, order somewhat matters. **(This may expand, as I dont know the common levels of threat in the game yet)**
 
 Start playing!
 

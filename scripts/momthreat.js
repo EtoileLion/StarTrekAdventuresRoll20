@@ -1,13 +1,12 @@
 var momtokens = [];
 var thrtokens = [];
-var momthr_gmsheet = "";
 var mom_attr = "";
 var thr_attr = "";
 
 on("ready",function() { 
-    momthr_gmsheet = findObjs({type:'character',name:'GMSheet'})[0];
-    mom_attr = findObjs({type: 'attribute',characterid: momthr_gmsheet.id, name: "Momentum"})[0]
-    thr_attr = findObjs({type: 'attribute',characterid: momthr_gmsheet.id, name: "Threat"})[0]
+    mom_attr = (momtokens.length > 0) ? momtokens[0].get("currentSide") : 0;
+    thr_attr = (thrtokens.length > 0) ? thrtokens[0].get("currentSide") : 0;
+    log("Momentum Initial Value: "+mom_attr+" | Threat Initial Value "+thr_attr)
     updatemttokens();
 })
 
@@ -21,7 +20,7 @@ on("add:token", function(obj) {
       } else { //Otherwise, it was Threat.
           thrtokens.push(obj);
       }
-      if(momthr_gmsheet != "") {
+      if(mom_attr != "") {
           updatemttokens();
       }
 
@@ -34,7 +33,9 @@ on("destroy:token", function(obj) {
       var sides = oSides.split("|").length;
       if (sides == 7) {
           //I assume this was a momentum.
+          log(momtokens);
           momtokens = _.reject(momtokens, function(el) { return el.id == obj.id});
+          log(momtokens);
       } else { //Otherwise, it was Threat.
           thrtokens = _.reject(thrtokens, function(el) { return el.id == obj.id});
       }
@@ -47,10 +48,10 @@ on("change:token:currentSide", function(obj) {
     if(oSides != "") { //This is a rollable token.
       var sides = oSides.split("|").length;
       if (sides == 7) {
-          mom_attr.set("current",oCurSide);
+          mom_attr = oCurSide;
           sendChat("System Message","Momentum Is Now "+oCurSide);
       } else {
-          thr_attr.set("current",oCurSide);
+          thr_attr = oCurSide;
           sendChat("System Message","Threat Is Now "+oCurSide);          
       }
       updatemttokens();
@@ -58,12 +59,13 @@ on("change:token:currentSide", function(obj) {
 });
 
 function updatemttokens() {
+    log("Updating tokens with Momentum "+mom_attr+" and Threat "+thr_attr)
     _.each(momtokens,function (token) { 
         var urls = token.get("sides").replace(/med/g,"thumb").split("|");
-        token.set({"currentSide":mom_attr.get('current'), "imgsrc": decodeURIComponent(urls[mom_attr.get('current')]) }); });
+        token.set({"currentSide":mom_attr, "imgsrc": decodeURIComponent(urls[mom_attr]) }); });
     _.each(thrtokens,function (token) {         
         var urls = token.get("sides").replace(/med/g,"thumb").split("|");
-        token.set({"currentSide":thr_attr.get('current'), "imgsrc": decodeURIComponent(urls[thr_attr.get('current')]) }); 
+        token.set({"currentSide":thr_attr, "imgsrc": decodeURIComponent(urls[thr_attr]) }); 
     });
    
 }
