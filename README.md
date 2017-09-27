@@ -14,8 +14,8 @@ Star Trek Adventures &trade; & &copy; 2017 CBS Studios Inc. &copy; 2017 Paramoun
 7. Copy the contents of scripts/taskdice.js into the New Script tab. Name it taskdice.js. Save the script.
 8. Copy the contents of scripts/chaldice.js into the New Script tab. Name it chaldice.js. Save the script.  
 ***The remainder of the instructions may be completed by any GM in the game.***
-10. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum). Order somewhat matters.
-11. Generate a Threat rollable table, filled with 21 icons (available under images/threat). Again, order somewhat matters. **(This may expand, as I dont know the common levels of threat in the game yet)**
+10. Generate a Momentum rollable table, filled with 7 icons (available under images/momentum). Order matters if you want the script to bark the right value.
+11. Generate a Threat rollable table, filled with 21 icons (available under images/threat). Again, order matters if you want the script to bark the right value. **(This may expand, as I dont know the common levels of threat in the game yet)**
 
 Start playing!
 
@@ -50,3 +50,24 @@ Start playing!
   !taskdice {"attr":"Command","attrv":2,"disc":"Conn","discv":6} #Rolls 2 dice in a Task Roll, with no focus, a difficulty of 1, complication range 20-20, and a target number of 8 (attrv+discv).
   !taskdice {"attr":"Fitness","attrv":5,"disc":"Medicine","discv":6,"focus":true,"cr":17,"diff":2,"dice":4} #Rolls 4 dice in a Task Roll, with focus applied, a difficulty of 2, complication range 17-20, and a target number of 11.
   ```
+
+* *How do I use the tokens?*  
+  In roll20, go to your rollable tables, and click the "Token" option. Move/resize the token as you wish. Whenever you change one of the tokens (by right clicking it, choosing Multi-Value, and then Choose Side), all of the tokens of the same type will change. (Note: The script currently assumes that any multisided token that is not a Momentum token is a Threat token, and will change it accordingly.)
+  
+
+## CharInACan ***Optional***
+There is an additional script, charinacan.js, in the scripts folder. This is (as the name implies) a Character In A Can roller, primarily intended for GM use to stir up random NPCs. It will generate a character for you, using the tables outlined in Chapter 5 of the Core Rulebook.
+
+The command specification for CharInACan is:
+
+```
+!charinacan {["generation":<gen>][[,]"full":<full>][[,]"public":<public>]}
+
+gen: The available races are defined by generation. Available values are "TNG","TOS", and "ENT". Defaults to "TNG". String.
+full: If true, will generate a Gender (Male/Female) and Experience level (Young/Experienced/Veteran). Defaults to false. Boolean.
+public: If true, will publish the result to all players. If false, will whisper. Defaults to false. Boolean.
+
+ex:
+!charinacan {} # Generates a TNG character with unspecified Gender or Experience, and whispers it to the person invoking the command.
+!charinacan {"generation":"ENT","full":true,"public":true} # Generates an Enterprise era character, with a gender and Experience level, and publishes it to general chat.
+```

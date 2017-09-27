@@ -26,7 +26,7 @@ on("chat:message", function(msg) {
                 dieout.push("<span style='color:#730505'>"+die+"</span>");
             }
             else if(die <= tn) { 
-                if (focus) { succ++; }
+                if (focus && die <= rolldata.discv) { succ++; }
                 else if (die == 1) { succ++; }
                 succ++;
                 dieout.push("<span style='color:#247305'>"+die+"</span>");
@@ -54,7 +54,7 @@ on("chat:message", function(msg) {
         }
         textout += '<tr><th>'+dieout.join()+'</th></tr>';
         if(succ >= diff) {
-            textout +='<tr><th style="padding-top:0px;"><div class="sheet-rolltemplate-headbar sheet-rolltemplate-taskbar" style="background-color:#247305"><span style="background-color:white;color:#247305;margin-left:0px;padding-right:3px;">TASK SUCCESSFUL</span></div></th></tr>';
+            textout +='<tr><th style="padding-top:0px;"><div class="sheet-rolltemplate-headbar sheet-rolltemplate-taskbar" style="background-color:#247305"><span style="background-color:white;color:#247305;margin-left:0px;padding-right:3px;">TASK SUCCESSFUL ('+succ+')</span></div></th></tr>';
             if(succ > diff) {
                 textout +='<tr><th style="padding-top:0px;">'+(succ-diff)+' MOMENTUM</th></tr>';                
             }
@@ -68,9 +68,7 @@ on("chat:message", function(msg) {
         sendChat(msg.who,textout);
         log(succ+"-"+diff+"="+(succ-diff))
         } else {
-            var whoOut = msg.who;
-            if(whoOut.indexOf(" (GM)") !== -1) { whoOut = whoOut.substring(0,whoOut.length-5); }
-            sendChat(msg.who,'/w "'+whoOut+'" Malformed Task Dice Roll.');
+            sendChat(msg.who,'/w "'+msg.who.replace(/\s\(GM\)/,"")+'" Malformed Task Dice Roll.');
         }        
     }
 });

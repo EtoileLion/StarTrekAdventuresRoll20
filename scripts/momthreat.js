@@ -16,6 +16,11 @@ on("add:token", function(obj) {
       var sides = oSides.split("|").length;
       if (sides == 7) {
           //I assume this was a momentum.
+          var owners = obj.get("controlledby").split(",");
+          if(!owners.includes("all")) {
+              owners.push("all");
+              obj.set("controlledby",owners.join(","));
+          }
           momtokens.push(obj);
       } else { //Otherwise, it was Threat.
           thrtokens.push(obj);
